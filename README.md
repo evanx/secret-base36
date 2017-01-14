@@ -37,6 +37,7 @@ curl -s https://raw.githubusercontent.com/evanx/secret-base36/master/Dockerfile 
 docker inspect secret-base36 | grep 'CMD'  
 docker run secret-base36
 ```
+
 or alternatively `Dockerfile.node740` for the official Node 7.4.0 image, similarly to the following demo:
 ```shell
 echo "(Date.now()*Math.random()).toString(36).replace(/\./, '')" |
