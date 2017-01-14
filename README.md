@@ -43,5 +43,5 @@ where:
 - we pipe Dockerfile contents to `docker build -`
 - `docker build -q` prints the built container ID only
 
-Thanks,
+
 https://twitter.com/@evanxsummers
