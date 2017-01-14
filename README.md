@@ -5,11 +5,11 @@ Containerized util to generate secret (random) string using NodeJS.
 
 Perhaps interesting as a minimal Node Docker demo.
 
-Try my pre-built image on DockerHub
+Try my pre-built image on DockerHub:
 ```
 docker run evanxsummers/secret-base36
 ```
-This image is built by
+This image is built by:
 ```
 docker build -t secret-base36 https://github.com/evanx/secret-base36.git
 ```
