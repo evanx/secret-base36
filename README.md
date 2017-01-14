@@ -20,7 +20,7 @@ CMD ["node", "-p", "(Date.now()*Math.random()).toString(36).replace(/\\./, '')"]
 ```
 where we double-escape the backslash as `\\`
 
-Alternatively we fetch `Dockerfile.node740`
+Alternatively we fetch e.g. `Dockerfile.node740`
 ```shell
 curl -s https://raw.githubusercontent.com/evanx/secret-base36/master/Dockerfile.node740 |
   docker build -t secret-base36 -
