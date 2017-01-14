@@ -9,6 +9,7 @@ Try my pre-built image on DockerHub
 ```
 docker run evanxsummers/secret-base36
 ```
+from Dockerfile
 ```
 FROM mhart/alpine-node
 CMD ["node", "-p", "(Date.now()*Math.random()).toString(36).replace(/\\./, '')"]
