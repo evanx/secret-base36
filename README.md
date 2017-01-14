@@ -38,4 +38,5 @@ echo "(Date.now()*Math.random()).toString(36).replace(/\./, '')" |
   `
 ```
 where our command is `node -p` to print the result of the executed script piped in.
-To enable standard input, we use `docker run -i` 
+
+Note that to enable standard input, we use `docker run -i` 
