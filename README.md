@@ -42,3 +42,6 @@ where:
 - to enable standard input, we use `docker run -i`
 - we pipe Dockerfile contents to `docker build -`
 - `docker build -q` prints the built container ID only
+
+Thanks,
+https://twitter.com/@evanxsummers
