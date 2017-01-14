@@ -24,7 +24,7 @@ echo "(Date.now()*Math.random()).toString(36).replace(/\./, '')" |
     ' | docker build -q -
   `
 ```
-where we are using the official Node 7.4.0 image as per following Dockerfile:
+where we are using the official Node 7.4.0 image as per `Dockerfile.node740` we fetch below:
 ```shell
 curl -s https://raw.githubusercontent.com/evanx/secret-base36/master/Dockerfile.node740 |
   docker build -t secret-base36 -
