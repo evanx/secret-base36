@@ -40,3 +40,5 @@ echo "(Date.now()*Math.random()).toString(36).replace(/\./, '')" |
 where:
 - our command is `node -p` to print the result of the JavaScript piped in.
 - to enable standard input, we use `docker run -i`
+- we pipe Dockerfile contents to `docker build -`
+- `docker build -q` prints the built container ID only
