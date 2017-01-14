@@ -28,7 +28,6 @@ docker inspect secret-base36 | grep 'CMD'
 docker run secret-base36
 ```
 where this uses the official Node 7.4.0 image, similarly to the following demo:
-Alternatively:
 ```shell
 echo "(Date.now()*Math.random()).toString(36).replace(/\./, '')" |
   docker run -i `
