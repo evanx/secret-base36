@@ -13,14 +13,14 @@ This image is built by
 ```
 docker build -t secret-base36 https://github.com/evanx/secret-base36.git
 ```
-from the Dockerfile
+from the Dockerfile:
 ```
 FROM mhart/alpine-node
 CMD ["node", "-p", "(Date.now()*Math.random()).toString(36).replace(/\\./, '')"]
 ```
 where we double-escape the backslash as `\\`
 
-Alternatively
+Alternatively:
 ```shell
 echo "(Date.now()*Math.random()).toString(36).replace(/\./, '')" |
   docker run -i `
