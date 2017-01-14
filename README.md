@@ -20,6 +20,14 @@ CMD ["node", "-p", "(Date.now()*Math.random()).toString(36).replace(/\\./, '')"]
 ```
 where we double-escape the backslash as `\\`
 
+Alternatively we fetch `Dockerfile.node740`
+```shell
+curl -s https://raw.githubusercontent.com/evanx/secret-base36/master/Dockerfile.node740 |
+  docker build -t secret-base36 -
+docker inspect secret-base36 | grep 'CMD'  
+docker run secret-base36
+```
+where this uses the official Node 7.4.0 image, similarly to the following demo:
 Alternatively:
 ```shell
 echo "(Date.now()*Math.random()).toString(36).replace(/\./, '')" |
@@ -30,10 +38,4 @@ echo "(Date.now()*Math.random()).toString(36).replace(/\./, '')" |
     ' | docker build -q -
   `
 ```
-where we are using the official Node 7.4.0 image as per `Dockerfile.node740` we fetch below:
-```shell
-curl -s https://raw.githubusercontent.com/evanx/secret-base36/master/Dockerfile.node740 |
-  docker build -t secret-base36 -
-docker inspect secret-base36 | grep 'CMD'  
-docker run secret-base36
-```
+where our command is `node -p` to print the result of the executed script piped in, hence `docker run -i`
