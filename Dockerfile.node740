@@ -1,0 +1,2 @@
+FROM node:7.4.0
+CMD ["node", "-p", "(Date.now()*Math.random()).toString(36).replace(/\\./, '')"]
